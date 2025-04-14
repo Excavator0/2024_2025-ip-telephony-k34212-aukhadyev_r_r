@@ -24,17 +24,17 @@ Date of finished: 14.04.2025
 
 В работе использовалась ОС Ubuntu. На неё была установлена Asterisk  
 
-<img src="lab3/img/1.png" alt="Установка asterisk" width="600"/>  
+<img src="/lab3/img/1.png" alt="Установка asterisk" width="600"/>  
 
 После этого была проверена установка: проверка версии и проверка запуска через `systemctl status`  
 
-<img src="lab3/img/2.png" alt="Версия asterisk" width="600"/>  
+<img src="/lab3/img/2.png" alt="Версия asterisk" width="600"/>  
 
-<img src="lab3/img/3.png" alt="Статус asterisk" width="600"/>  
+<img src="/lab3/img/3.png" alt="Статус asterisk" width="600"/>  
 
 Для создания двух абонентов (1001 и 1002) изменён файл /etc/asterisk/sip.conf. *На скриншоте ошибка, второй абонент позже был переписан на [1002]*  
 
-<img src="lab3/img/4.png" alt="Изменение sip.conf" width="600"/>  
+<img src="/lab3/img/4.png" alt="Изменение sip.conf" width="600"/>  
 
 - type=friend — аккаунт может работать как клиент (инициировать вызовы) и сервер (принимать вызовы).
 - host=dynamic — сервер разрешает регистрацию с динамического IP-адреса.
@@ -42,7 +42,7 @@ Date of finished: 14.04.2025
 
 В файл /etc/asterisk/extensions.conf были добавлены правила маршрутизации  
 
-<img src="lab3/img/5.png" alt="Изменение extensions.conf" width="600"/>  
+<img src="/lab3/img/5.png" alt="Изменение extensions.conf" width="600"/>  
 
 exten => _1XXX,1,Dial(...) — правило для обработки вызовов:  
 - _1XXX — шаблон номера (любые 4 цифры, начинающиеся с 1).
@@ -52,9 +52,9 @@ exten => _1XXX,1,Dial(...) — правило для обработки вызо
 
 После этого asterisk был перезагружен, были проверены пиры  
 
-<img src="lab3/img/6.png" alt="Новый статус" width="600"/>  
+<img src="/lab3/img/6.png" alt="Новый статус" width="600"/>  
 
-<img src="lab3/img/7.png" alt="Проверка пиров" width="600"/>  
+<img src="/lab3/img/7.png" alt="Проверка пиров" width="600"/>  
 
 ### 2. Установка и настройка софтфонов.
 
@@ -63,27 +63,27 @@ exten => _1XXX,1,Dial(...) — правило для обработки вызо
 
 Настройка Zoiper  
 
-<img src="lab3/img/8.png" alt="Настройка Zoiper" width="600"/>  
+<img src="/lab3/img/8.png" alt="Настройка Zoiper" width="600"/>  
 
-<img src="lab3/img/9.png" alt="астройка Zoiper" width="600"/>  
+<img src="/lab3/img/9.png" alt="астройка Zoiper" width="600"/>  
 
 После успешной настройки, номер был зарегестрирован  
 
-<img src="lab3/img/10.png" alt="Первый телефон появился в пирах" width="600"/>  
+<img src="/lab3/img/10.png" alt="Первый телефон появился в пирах" width="600"/>  
 
 Настройка MicroSIP
 
-<img src="lab3/img/11.png" alt="Настройка MicroSIP" width="600"/>  
+<img src="/lab3/img/11.png" alt="Настройка MicroSIP" width="600"/>  
 
 Второй номер так же был успешно зарегестрирован  
 
-<img src="lab3/img/12.png" alt="Второй телефон появился в пирах" width="600"/>  
+<img src="/lab3/img/12.png" alt="Второй телефон появился в пирах" width="600"/>  
 
 ### 3. Проверка связи
 
 Была проверена связанность: тестовый звонок с 1002 (MicroSIP) на 1001 (Zoiper)  
 
-<img src="lab3/img/13.png" alt="Проверка звонка" width="600"/>  
+<img src="/lab3/img/13.png" alt="Проверка звонка" width="600"/>  
 
 ## Вывод
 
